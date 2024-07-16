@@ -1,0 +1,33 @@
+﻿@model ASPNETMVCCRUD.Models.UpdateEmployeeViewModel
+
+<h1>Edit Employee</h1>
+<form method="post" action="View" class="mt-5">
+     <input type="text" class="form-control" asp-for="Id" hidden/>
+    <div class="mb-3">
+        <label for="Name" class="form-label"></label>
+        <input type="text" class="form-control" asp-for="Name" />
+    </div>
+    <div class="mb-3">
+        <label for="Email" class="form-label">Email Address</label>
+        <input type="text" class="form-control" asp-for="Email" />
+    </div>
+    <div class="mb-3">
+        <label for="Salary" class="form-label">Salary</label>
+        <input type="number" class="form-control" asp-for="Salary" />
+    </div>
+    <div class="mb-3">
+        <label for="DateOfBirth" class="form-label">Date Of Birth</label>
+        <input type="date" class="form-control" asp-for="DateOfBirth" />
+    </div>
+    <div class="mb-3">
+        <label for="Department" class="form-label">Department</label>
+        <input type="text" class="form-control" asp-for="Department" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+    
+    <button type="submit" class="btn btn-danger"
+            asp-action="Delete"
+            asp-controller="Employees">Delete</button>
+</form>
+
